@@ -7,9 +7,8 @@ def checkout(username):
     cart = get_cart(username)
     total = 0
     for item in cart:
-        while(item.cost > 0):
-            total += 1
-            item.cost -= 1
+        total += item.cost
+            
 
     #Here the exit can happen when a illegal memory is accessed 
     # or when a error is not handled properly
